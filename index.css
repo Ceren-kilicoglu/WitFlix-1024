@@ -303,8 +303,8 @@ footer h5 {
     }
 
     .user-panel input {
-        padding: .3rem 1.8rem .3rem .3rem;
-        width: 12rem;
+        padding: .5rem 2rem .5rem .5rem;
+        width: 13rem;
         background: url("/img/search-icon.png");
         background-size: 12%;
         background-repeat: no-repeat;

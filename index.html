@@ -25,8 +25,8 @@
             <i class="fa-solid fa-bell notifications fa-2x"></i>
             <img class="avatar" src="https://picsum.photos/50" />
         </div>
-        <!-- hamburger menü üzerine gelince görünür olmasını nasıl yaparız?-->
-        <i class="fa-solid fa-bars fa-2xl nav-menu"></i>
+
+        <i class="fa-solid fa-bars fa-2xl nav-menu" onclick="toggleUserPanel()"></i>
     </header>
     <main class="hero">
         <div class="main-movie">
@@ -51,7 +51,7 @@
         </div>
     </main>
     <section class="suggestion">
-        <!-- 7 tane movie card olsun. scroll ile sağa-sola kaysın???-->
+
         <div class="suggestion-row">
             <div class="suggestion-row-title">
                 <h3>Popular Movies</h3>
@@ -227,6 +227,31 @@
             </div>
         </div>
     </footer>
+    <script>
+        function toggleUserPanel() {
+            const userPanel = document.querySelector('.user-panel');
+            const navMenu = document.querySelector('.nav-menu');
+            const h1 = document.querySelector('h1');
+            const screenWidth = window.innerWidth;
+
+            // Toggle the visibility of the user panel
+            userPanel.classList.toggle('active');
+
+            // Add the menu toggle functionality for smaller screens (below 440px)
+            if (screenWidth < 440) {
+                navMenu.classList.toggle('active');
+
+                // Hide h1 when the menu is active
+                if (navMenu.classList.contains('active')) {
+                    h1.style.display = 'none';  // Hide h1 when menu is opened
+                } else {
+                    h1.style.display = 'block'; // Show h1 when menu is closed
+                }
+            }
+        }
+
+    </script>
+
 </body>
 
 </html>

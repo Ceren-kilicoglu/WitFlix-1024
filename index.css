@@ -20,18 +20,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 header h1 {
     color: red;
     margin: 0;
     flex: 1;
+    font-size: 2.7rem;
 }
 
 header nav {
     display: flex;
     gap: .5rem;
+
 }
 
 header nav a {
@@ -47,6 +48,11 @@ header .user-panel {
     justify-content: flex-end;
 }
 
+.user-panel.active {
+    display: flex;
+
+}
+
 .user-panel input {
     padding: .3rem 1.8rem .3rem .3rem;
     width: 7rem;
@@ -57,8 +63,6 @@ header .user-panel {
     color: white;
 }
 
-
-
 .user-panel img {
     border-radius: 100px;
     width: 2.5rem;
@@ -66,6 +70,7 @@ header .user-panel {
 
 .nav-menu {
     display: none;
+    cursor: pointer;
 }
 
 /* hero */
@@ -96,7 +101,6 @@ main {
 .movie-details span {
     color: red;
     font-weight: bold;
-    ;
 }
 
 .movie-details p {
@@ -118,39 +122,31 @@ button i {
 }
 
 /* suggestion */
-
 .suggestion-row {
     margin-bottom: 2rem;
     margin-top: 2rem;
     overflow: auto;
     white-space: nowrap;
     padding-bottom: 1rem;
-
 }
-
 
 .suggestion-row::-webkit-scrollbar {
     height: 8px;
-
 }
 
 .suggestion-row::-webkit-scrollbar-track {
     background: #2d2d2d;
     border-radius: 10px;
-
 }
 
 .suggestion-row::-webkit-scrollbar-thumb {
     background: rgb(111, 111, 111);
     border-radius: 10px;
-
 }
 
 .suggestion-row::-webkit-scrollbar-thumb:hover {
     background: #c7c3c3;
-    /
 }
-
 
 .suggestion-row-title {
     display: flex;
@@ -166,8 +162,6 @@ button i {
 .suggestion-row-title a {
     text-decoration: none;
     color: gray;
-
-
 }
 
 .suggestion-row-title a:hover {
@@ -175,12 +169,12 @@ button i {
 }
 
 .suggestion-row-title h3 {
-    margin: .5rem 0
+    margin: .5rem 0;
 }
 
 .suggestion-movies {
     display: flex;
-    gap: 1.5rem
+    gap: 1.5rem;
 }
 
 .movie-card {
@@ -203,7 +197,7 @@ button i {
 .movie-detail-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem
+    gap: 1rem;
 }
 
 .movie-card button {
@@ -218,7 +212,6 @@ button i {
 }
 
 /* footer */
-
 footer {
     display: flex;
     justify-content: space-between;
@@ -232,7 +225,6 @@ footer h5 {
 .footer-navigation nav {
     display: flex;
     gap: 1rem;
-
 }
 
 .footer-navigation nav a {
@@ -244,7 +236,7 @@ footer h5 {
 }
 
 .social-navigation {
-    min-width: 120px
+    min-width: 120px;
 }
 
 .mobile-app-navigation {
@@ -252,12 +244,16 @@ footer h5 {
 }
 
 .mobile-app-navigation img {
-    height: 2rem
+    height: 2rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
     header {
         flex-wrap: wrap;
+    }
+
+    header h1 {
+        font-size: 2rem;
     }
 
     header nav {
@@ -269,12 +265,13 @@ footer h5 {
 
     header .user-panel {
         display: none;
+        width: 0%;
+
     }
 
     .nav-menu {
         display: block;
     }
-
 
     .main-movie {
         width: 100%;
@@ -293,7 +290,25 @@ footer h5 {
     .mobile-app-navigation {
         width: 100%;
     }
+}
 
+@media (max-width: 450px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
 
+    .user-panel img {
+        width: 25px;
+        padding-right: 8px;
+    }
 
+    .user-panel input {
+        padding: .3rem 1.8rem .3rem .3rem;
+        width: 9rem;
+        background: url("/img/search-icon.png");
+        background-size: 12%;
+        background-repeat: no-repeat;
+        background-position: 97% 50%;
+        color: white;
+    }
 }

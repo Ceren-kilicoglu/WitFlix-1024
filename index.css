@@ -132,6 +132,9 @@ button i {
 
 .suggestion-row::-webkit-scrollbar {
     height: 8px;
+    display: none;
+
+
 }
 
 .suggestion-row::-webkit-scrollbar-track {
